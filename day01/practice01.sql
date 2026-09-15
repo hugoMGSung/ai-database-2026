@@ -1,0 +1,1 @@
+create database ai_db;
