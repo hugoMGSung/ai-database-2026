@@ -232,3 +232,7 @@ delete from students
 | DATE        | 날짜                          | 2026-09-15              |
 | TIMESTAMP   | 일자(날짜와 시간)             | 2026-09-15 16:00:20.456 |
 | JSONB       | JSON 데이터                   | {"name" : "홍길동"}     |
+
+
+
+변경
