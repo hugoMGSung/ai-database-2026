@@ -564,7 +564,6 @@ created_at timestamp default current_timestamp
 ALTER TABLE public.products ALTER COLUMN category SET DEFAULT '미정';
 ```
 
-
 ### 테이블 모델링
 
 관계형 DB에는 테이블간 관계에 몇 가지 관계성이 존재
@@ -579,3 +578,22 @@ ALTER TABLE public.products ALTER COLUMN category SET DEFAULT '미정';
 - 다대다 관계는 DB에서 구현 불가. 일대다 / 일대다 관계로 분리해서 구현
 
 ![](assets/20260917_121636_Gemini_Generated_Image_y2ssbxy2ssbxy2ss.png)
+
+- 학생 한명은 여러 과목을 수강할 수 있음
+- 과목 하나에는 여러 학생이 수강할 수 있음
+- 학생 테이블 주요정보
+  - 이름, 이메일, 나이, 전공
+- 과목 테이블 주요정보
+  - 타이틀, 교강사, 시수
+- 수강 신청 주요정보
+  - 수강 학생정보 구분값, 과목 정보 구분값
+
+
+#### 모델링 툴
+
+- ERD(Entity Relationship Diagram) 모델링
+- https://www.erdcloud.com/
+
+![](assets/20260917_150846_image.png)
+
+- 학생 과목 수강관리 테이블 ERD
