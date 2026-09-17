@@ -588,7 +588,6 @@ ALTER TABLE public.products ALTER COLUMN category SET DEFAULT '미정';
 - 수강 신청 주요정보
   - 수강 학생정보 구분값, 과목 정보 구분값
 
-
 #### 모델링 툴
 
 - ERD(Entity Relationship Diagram) 모델링
@@ -597,3 +596,11 @@ ALTER TABLE public.products ALTER COLUMN category SET DEFAULT '미정';
 ![](assets/20260917_150846_image.png)
 
 - 학생 과목 수강관리 테이블 ERD
+
+### JOIN
+
+관계형 데이터베이스에서 여러개로 나눈 테이블의 정보를 하나로 합쳐서 조회하는 것
+
+### 트랜잭션
+
+- 커밋, 롤백
