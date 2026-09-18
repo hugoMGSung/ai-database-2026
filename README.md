@@ -688,3 +688,13 @@ rollback;
 - 메뉴 데이터베이스 > 트랜잭션 모드 > Manual Commit으로 변경 후 작업
 
 ![](assets/20260918_123647_image.png)
+
+
+#### 트랜잭션 실습
+
+- Auto-Commit 상태에서 테이블 생성
+- Manual-Commit으로 변경
+- `begin`(DBeaver에서 자동으로 트랙잭션 시작), `commit`, `rollback`
+
+
+[다음](./README2.md)

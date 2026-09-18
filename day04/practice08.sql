@@ -101,10 +101,62 @@ select min(age) "최소령자" from students s ;
 select max(age) "최고령자" from students s ;
 
 -- 전공별 학생수 집계 조회
-select count(*) "학생수", s.major "전공"  
+select count(*) "학생수", s.major  
   from students s
 group by s.major
 order by s.major;
+
+
+
+select c.title, count(*) from courses c 
+  inner join enrollments e 
+  on c.id = e.course_id
+  group by c.title;
+
+
+-- 트랜잭션 실습
+drop table accounts;
+
+create table accounts (
+	account_id int primary key,  -- 직접 입력해야함
+	owner_name varchar(50) not null, 
+	balance numeric(12, 0) not null check (balance >= 0)
+);
+
+-- 트랜잭션 시작
+begin;
+
+insert into accounts (account_id, owner_name, balance)
+values (1, '김철수', 100000), (2, '박영희', 50000); 
+
+select * from accounts a;
+
+-- 확정/커밋
+commit;
+-- 취소/롤백
+rollback;
+
+
+
+begin;
+
+update accounts set
+ balance = 1000000
+where account_id = 2;
+
+commit;
+
+rollback;
+
+
+-- 삭제 트랜잭션
+begin;
+
+delete from accounts ;
+
+rollback;
+
+
 
 
 
