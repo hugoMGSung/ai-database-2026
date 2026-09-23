@@ -49,7 +49,7 @@ pip list
 
 ### 기초 FastAPI 서버
 
-- 소스 작성
+- [소스](./day04/main.py) 작성
 - VS Code 재시작
 
 ### 문제해결
